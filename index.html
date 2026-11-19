@@ -132,6 +132,21 @@
   .timeline .sub { display: block; font-weight: 400; font-size: .9rem; color: #ccc; }
   .timeline li.main .time { color: #ff6b94; }
 
+  /* ===== タイムスケジュール詳細（クリックで開閉） ===== */
+  .sched-detail { margin-top: 32px; }
+  .sched-detail summary {
+    display: inline-block; cursor: pointer; list-style: none;
+    padding: 12px 28px; border: 1px solid #fff; font-weight: 700; letter-spacing: .06em;
+  }
+  .sched-detail summary::-webkit-details-marker { display: none; }
+  .sched-detail summary::after { content: " ▼"; font-size: .8em; }
+  .sched-detail[open] summary::after { content: " ▲"; }
+  .sched-detail summary:hover { background: #fff; color: var(--black); }
+  .detail-list { list-style: none; margin-top: 20px; border-top: 1px solid rgba(255,255,255,.25); }
+  .detail-list li { display: grid; grid-template-columns: 200px 1fr; padding: 14px 10px; border-bottom: 1px solid rgba(255,255,255,.25); }
+  .detail-list .t { font-family: var(--serif); font-size: 1.05rem; }
+  .detail-note { margin-top: 14px; color: #ccc; font-size: .9rem; }
+
   /* ===== 注意事項 ===== */
   .notice-group { margin-bottom: 36px; }
   .notice-group h3 { font-size: 1.1rem; margin-bottom: 14px; padding-left: 14px; border-left: 4px solid var(--red); }
@@ -141,7 +156,7 @@
   .alert { background: var(--gray); border-left: 4px solid var(--black); padding: 16px 20px; font-size: .95rem; }
 
   /* ===== 申し込みフォーム ===== */
-  .form-wrap { width: 100%; max-width: 720px; margin: 0 auto; text-align: center; background: #fff; color: var(--black); padding: 12px 0; }
+  .form-wrap { width: 100%; margin: 0 auto; text-align: center; background: #fff; color: var(--black); padding: 12px 0; }
   .form-wrap iframe { display: block; width: 100%; max-width: 100%; margin: 0 auto; border: 0; }
   /* フォームの高さ：PC/タブレット 2200px、スマホは折り返しが増えるため高めに設定。
      設問を増減したら、この数値を調整してください */
@@ -189,6 +204,7 @@
     .info dt { padding: 16px 6px 0; }
     .info dd { padding: 4px 6px 16px 24px; }
     .timeline li { grid-template-columns: 1fr; padding: 16px 6px; }
+    .detail-list li { grid-template-columns: 1fr; padding: 12px 6px; }
     .side-tab { display: none; }
     .links .btn { width: 100%; text-align: center; transform: none; }
     .links .btn span { transform: none; }
@@ -231,11 +247,12 @@
         <dl><dt>開催日時</dt><dd>2027年1月13日（水）11:30～15:00</dd></dl>
         <dl><dt>開催場所</dt><dd>富士スピードウェイ レーシングコース</dd></dl>
         <dl><dt>参加費</dt><dd>30,000円（計測器・保険料込み）</dd></dl>
-        <dl><dt>募集台数</dt><dd>30台（先着順）<p class="note">※台数設定要否は未定（仮置き）</p></dd></dl>
+        <dl><dt>募集台数</dt><dd>先着順</dd></dl>
       </div>
       <div class="links">
         <a class="btn" href="https://share.google/umrBissjwYooZF7CF" target="_blank" rel="noopener"><span>会場の場所（Googleマップ）</span></a>
         <a class="btn" href="https://www.fsw.tv/guide/facility/racing.html" target="_blank" rel="noopener"><span>コースについて（FSW公式）</span></a>
+        <a class="btn" href="licence_text.pdf" target="_blank" rel="noopener"><span>レギュレーション</span></a>
       </div>
     </div>
   </section>
@@ -250,6 +267,20 @@
         <li class="main"><span class="time">13:30</span><span class="desc">走行開始<span class="sub">走行本数：30分 × 2本</span></span></li>
         <li><span class="time">15:00</span><span class="desc">終了</span></li>
       </ul>
+
+      <details class="sched-detail">
+        <summary>詳細（予定）</summary>
+        <ul class="detail-list">
+          <li><span class="t">11:30～12:30</span><span>受付開始（2Fミーティングルーム）</span></li>
+          <li><span class="t">12:30～13:30</span><span>ドライバーズミーティング</span></li>
+          <li><span class="t">13:30～14:00</span><span>走行：Aグループ 1回目</span></li>
+          <li><span class="t">14:00～14:30</span><span>走行：Bグループ 1回目</span></li>
+          <li><span class="t">14:30～〇〇:〇〇</span><span>走行：Aグループ 2回目</span></li>
+          <li><span class="t">15:00～〇〇:〇〇</span><span>走行：Bグループ 2回目</span></li>
+          <li><span class="t">16:00～〇〇:〇〇</span><span>表彰式</span></li>
+        </ul>
+        <p class="detail-note">※走行は 30分 × 2本</p>
+      </details>
     </div>
   </section>
 
@@ -303,7 +334,7 @@
     <span class="sep" aria-hidden="true"></span>
     <img class="tcs" src="logo-tcs.png" alt="TOPRANK CLASSIC SPECIALITIES" width="720" height="249">
   </div>
-  <p>非営利で開催するサーキット走行会です。</p>
+  <p>TOPRANK走行会 2027 富士スピードウェイ</p>
   <p style="margin-top:10px">Copyright &copy; TOPRANK All Rights Reserved.</p>
 </footer>
 
