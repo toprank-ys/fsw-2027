@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TOPRANK走行会 2027 富士スピードウェイ | 参加募集</title>
+<meta name="description" content="TOPRANK走行会 2027 富士スピードウェイ。非営利で開催するサーキット走行会の開催概要と参加申し込みページです。">
+<meta property="og:title" content="TOPRANK走行会 2027 富士スピードウェイ">
+<meta property="og:description" content="非営利のサーキット走行会 参加者募集中。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ===== カラー：TOPRANK ブランドカラー ===== */
+  :root {
+    --red: #be003f;        /* TR RED  DIC N719 */
+    --red-dark: #9a0033;
+    --black: #212121;      /* TR BLACK DIC 582 */
+    --gray: #f4f4f4;
+    --line: #dcdcdc;
+    --serif: "Noto Serif", "Source Serif 4", Georgia, "Times New Roman", serif;
+    --sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP", Meiryo, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body {
+    font-family: var(--sans);
+    color: var(--black);
+    line-height: 1.85;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+  }
+  img { max-width: 100%; height: auto; }
+  a { color: inherit; }
+  .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  /* ===== ヘッダー（白地・シンプル） ===== */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 70px;
+  }
+  .logo { display: block; line-height: 0; }
+  .logo img { height: 48px; width: auto; display: block; }
+  nav ul { display: flex; gap: 28px; list-style: none; align-items: center; }
+  nav a { text-decoration: none; font-size: .85rem; font-weight: 700; color: var(--black); }
+  nav a:hover { color: var(--red); }
+  nav a.cta {
+    background: var(--black); color: #fff; padding: 9px 24px;
+    transform: skewX(-12deg);
+  }
+  nav a.cta span { display: inline-block; transform: skewX(12deg); }
+  nav a.cta:hover { background: var(--red); color: #fff; }
+
+  /* ===== メインビジュアル（hero.jpg・画面幅いっぱい） ===== */
+  .hero {
+    position: relative; width: 100%;
+    height: 68vh; min-height: 420px; max-height: 760px;
+    background:
+      url("hero.jpg") center 70% / cover no-repeat,
+      linear-gradient(135deg, #111 0%, #212121 55%, #4a0019 100%);
+    color: #fff;
+  }
+  .hero::before { /* 文字を読みやすくする下部グラデーション */
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,0) 55%);
+  }
+  .hero-caption {
+    position: absolute; right: 0; bottom: 0; left: 0;
+    max-width: 1200px; margin: 0 auto; padding: 0 20px 36px;
+    text-align: right;
+  }
+  .hero-caption .en {
+    display: block; font-family: var(--serif); font-size: .85rem; letter-spacing: .2em;
+    padding-top: 10px; margin-top: 12px; border-top: 1px solid rgba(255,255,255,.8);
+    display: inline-block; min-width: 55%;
+  }
+  .hero-caption h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem); font-weight: 500; line-height: 1.35; letter-spacing: .05em;
+    text-shadow: 0 2px 10px rgba(0,0,0,.5);
+  }
+  .hero-meta { margin-top: 8px; font-size: clamp(.9rem, 2.6vw, 1.1rem); letter-spacing: .06em; }
+
+  /* ===== 見出し（英字セリフ＋日本語サブ＋細い赤ライン） ===== */
+  section { padding: 80px 0; }
+  .bg-black { background: var(--black); color: #fff; }
+  .bg-gray { background: var(--gray); }
+  .sec-title {
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 20px;
+    border-bottom: 1px solid var(--red);
+    padding-bottom: 8px; margin-bottom: 40px;
+  }
+  .sec-title .en { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 7vw, 3.2rem); line-height: 1.2; letter-spacing: .01em; }
+  .sec-title .ja { font-size: clamp(.85rem, 2.5vw, 1.05rem); }
+  .lead { margin-bottom: 32px; }
+
+  /* ===== 開催概要 ===== */
+  .info { border-top: 1px solid var(--line); }
+  .info dl { display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid var(--line); }
+  .info dt { padding: 20px 10px; font-weight: 700; }
+  .info dt::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--red); margin-right: 10px; transform: skewX(-12deg); }
+  .info dd { padding: 20px 10px; }
+  .note { font-size: .85rem; color: #666; margin-top: 2px; }
+  .links { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; }
+
+  /* ===== ボタン（斜めカット） ===== */
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700; letter-spacing: .06em;
+    padding: 14px 36px; border: 1px solid var(--black); color: var(--black); background: #fff;
+    transform: skewX(-12deg); transition: .2s;
+  }
+  .btn span { display: inline-block; transform: skewX(12deg); }
+  .btn:hover { background: var(--black); color: #fff; }
+  .btn.red { background: var(--red); border-color: var(--red); color: #fff; }
+  .btn.red:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+  /* ===== タイムスケジュール（黒背景） ===== */
+  .timeline { list-style: none; border-top: 1px solid rgba(255,255,255,.25); }
+  .timeline li {
+    display: grid; grid-template-columns: 160px 1fr; align-items: baseline;
+    padding: 22px 10px; border-bottom: 1px solid rgba(255,255,255,.25);
+  }
+  .timeline .time { font-family: var(--serif); font-size: 1.8rem; line-height: 1.2; }
+  .timeline .desc { font-weight: 700; font-size: 1.05rem; }
+  .timeline .sub { display: block; font-weight: 400; font-size: .9rem; color: #ccc; }
+  .timeline li.main .time { color: #ff6b94; }
+
+  /* ===== 注意事項 ===== */
+  .notice-group { margin-bottom: 36px; }
+  .notice-group h3 { font-size: 1.1rem; margin-bottom: 14px; padding-left: 14px; border-left: 4px solid var(--red); }
+  .notice-group ul { list-style: none; border-top: 1px solid var(--line); }
+  .notice-group li { padding: 14px 6px; border-bottom: 1px solid var(--line); }
+  .tag { display: inline-block; background: var(--red); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .1em; padding: 1px 10px; margin-right: 10px; vertical-align: 2px; transform: skewX(-12deg); }
+  .alert { background: var(--gray); border-left: 4px solid var(--black); padding: 16px 20px; font-size: .95rem; }
+
+  /* ===== 申し込みフォーム ===== */
+  .form-wrap { width: 100%; max-width: 720px; margin: 0 auto; text-align: center; background: #fff; color: var(--black); padding: 24px 12px; }
+  .form-wrap iframe { display: block; width: 100%; max-width: 100%; margin: 0 auto; border: 0; }
+  .form-placeholder { border: 2px dashed #bbb; padding: 40px 20px; color: #777; }
+
+  /* ===== 右端の固定タブ（PCのみ） ===== */
+  .side-tab {
+    position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 90;
+    writing-mode: vertical-rl; background: var(--red); color: #fff; text-decoration: none;
+    font-weight: 700; letter-spacing: .3em; padding: 28px 16px;
+  }
+  .side-tab:hover { background: var(--red-dark); }
+
+  /* ===== フッター ===== */
+  footer { background: var(--black); color: #fff; text-align: center; padding: 40px 20px; font-size: .85rem; border-top: 4px solid var(--red); }
+  footer .logo-f { display: inline-block; background: #fff; padding: 10px 18px; line-height: 0; margin-bottom: 16px; }
+  footer .logo-f img { height: 44px; width: auto; }
+  footer p { color: #bbb; }
+
+  /* ===== スマホ対応 ===== */
+  @media (max-width: 760px) {
+    .header-inner { height: 60px; }
+    .logo img { height: 40px; }
+    nav li:not(:last-child) { display: none; }
+    section { padding: 56px 0; }
+    .hero { height: 56vh; min-height: 360px; }
+    .hero-caption { text-align: left; padding-bottom: 28px; }
+    .hero-caption .en { min-width: 100%; }
+    .info dl { grid-template-columns: 1fr; }
+    .info dt { padding: 16px 6px 0; }
+    .info dd { padding: 4px 6px 16px 24px; }
+    .timeline li { grid-template-columns: 1fr; padding: 16px 6px; }
+    .side-tab { display: none; }
+    .links .btn { width: 100%; text-align: center; transform: none; }
+    .links .btn span { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="logo"><img src="logo.jpg" alt="TOPRANK" width="150" height="68"></a>
+    <nav>
+      <ul>
+        <li><a href="#overview">開催概要</a></li>
+        <li><a href="#schedule">タイムスケジュール</a></li>
+        <li><a href="#notice">注意事項</a></li>
+        <li><a href="#entry" class="cta"><span>参加申し込み</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== メインビジュアル（画像ファイル名：hero.jpg） ===== -->
+<div class="hero" id="top" role="img" aria-label="TOPRANK走行会 メインビジュアル">
+  <div class="hero-caption">
+    <h1>TOPRANK走行会 2027<br>富士スピードウェイ</h1>
+    <p class="hero-meta">2027年1月13日（水）11:30～15:00 ／ 非営利開催</p>
+    <span class="en">TOPRANK CIRCUIT MEETING at FUJI SPEEDWAY</span>
+  </div>
+</div>
+
+<main>
+  <!-- ===== 開催概要 ===== -->
+  <section id="overview">
+    <div class="container">
+      <h2 class="sec-title"><span class="en">Overview</span><span class="ja">開催概要</span></h2>
+      <p class="lead">本イベントは、サーキット走行を安全に楽しんでいただくための非営利の走行会です。初めての方もお気軽にご参加ください。</p>
+      <div class="info">
+        <dl><dt>イベント名</dt><dd>TOPRANK走行会 2027 富士スピードウェイ</dd></dl>
+        <dl><dt>開催日時</dt><dd>2027年1月13日（水）11:30～15:00</dd></dl>
+        <dl><dt>開催場所</dt><dd>富士スピードウェイ レーシングコース</dd></dl>
+        <dl><dt>参加費</dt><dd>30,000円（計測器・保険料込み）</dd></dl>
+        <dl><dt>募集台数</dt><dd>30台（先着順）<p class="note">※台数は仮設定です。変更となる場合があります。</p></dd></dl>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://share.google/umrBissjwYooZF7CF" target="_blank" rel="noopener"><span>会場の場所（Googleマップ）</span></a>
+        <a class="btn" href="https://www.fsw.tv/guide/facility/racing.html" target="_blank" rel="noopener"><span>コースについて（FSW公式）</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== タイムスケジュール ===== -->
+  <section id="schedule" class="bg-black">
+    <div class="container">
+      <h2 class="sec-title"><span class="en">Time Schedule</span><span class="ja">タイムスケジュール</span></h2>
+      <ul class="timeline">
+        <li><span class="time">11:30</span><span class="desc">受付</span></li>
+        <li><span class="time">12:30</span><span class="desc">ドライバーズミーティング（ドラミ）<span class="sub">参加必須です</span></span></li>
+        <li class="main"><span class="time">13:30</span><span class="desc">走行開始<span class="sub">走行本数：30分 × 2本</span></span></li>
+        <li><span class="time">15:00</span><span class="desc">終了</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 注意事項・持ち物 ===== -->
+  <section id="notice">
+    <div class="container">
+      <h2 class="sec-title"><span class="en">Notice</span><span class="ja">注意事項・持ち物</span></h2>
+
+      <div class="notice-group">
+        <h3>参加にあたって</h3>
+        <ul>
+          <li><span class="tag">必須</span>ドライバーズミーティングへの参加</li>
+          <li>走行中はシートベルトを着用してください。</li>
+          <li>走行中は窓ガラスを全閉にしてください。</li>
+        </ul>
+      </div>
+
+      <div class="notice-group">
+        <h3>装備（ヘルメット・グローブ・長袖長ズボン 必須）</h3>
+        <ul>
+          <li><span class="tag">必須</span><strong>ヘルメット：</strong>フルフェイス型またはジェット型</li>
+          <li><span class="tag">必須</span><strong>服装：</strong>レーシングスーツ、または綿製の長袖・長ズボン</li>
+          <li><span class="tag">必須</span><strong>グローブ：</strong>レーシンググローブ、または指先・手首が露出せず滑りにくい素材のもの（軍手は不可）</li>
+          <li><strong>シューズ：</strong>レーシングシューズ、またはペダル操作しやすい履き慣れた運動靴</li>
+        </ul>
+      </div>
+
+      <p class="alert">装備が不十分な場合は、走行をお断りすることがあります。当日までに必ずご準備ください。</p>
+    </div>
+  </section>
+
+  <!-- ===== 参加申し込み ===== -->
+  <section id="entry" class="bg-black">
+    <div class="container">
+      <h2 class="sec-title"><span class="en">Entry</span><span class="ja">参加申し込み</span></h2>
+      <p class="lead">下記フォームに必要事項をご入力のうえ、送信してください。募集台数に達し次第、受付を終了します。</p>
+
+      <div class="form-wrap">
+        <!-- ▼▼ ここに Googleフォームの <iframe ...></iframe> を貼り付けてください ▼▼ -->
+        <div class="form-placeholder">
+          ここにGoogleフォームの埋め込みコード（&lt;iframe&gt;）を貼り付けてください。
+        </div>
+        <!-- ▲▲ ここまで ▲▲ -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<a href="#entry" class="side-tab">参加申し込み</a>
+
+<footer>
+  <div class="logo-f"><img src="logo.jpg" alt="TOPRANK" width="150" height="68"></div>
+  <p>TOPRANK走行会 2027 富士スピードウェイ ／ 非営利で開催するサーキット走行会です。</p>
+  <p style="margin-top:10px">Copyright &copy; TOPRANK All Rights Reserved.</p>
+</footer>
+
+<script>
+  /* Googleフォームなどの iframe が画面幅からはみ出さないように自動調整 */
+  (function () {
+    var wrap = document.querySelector('.form-wrap');
+    if (!wrap) return;
+    function fit() {
+      wrap.querySelectorAll('iframe').forEach(function (f) {
+        f.removeAttribute('width');          // 貼り付けコードの固定幅を無効化
+        f.style.width = '100%';
+        f.style.maxWidth = '100%';
+        if (!f.getAttribute('height')) f.setAttribute('height', '1400');
+      });
+    }
+    fit();
+    new MutationObserver(fit).observe(wrap, { childList: true, subtree: true });
+  })();
+</script>
+</body>
+</html>
