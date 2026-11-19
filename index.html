@@ -47,7 +47,7 @@
     max-width: 1200px; margin: 0 auto; padding: 0 20px; height: 70px;
   }
   .logo { display: block; line-height: 0; }
-  .logo img { height: 48px; width: auto; display: block; }
+  .logo img { width: 240px; height: auto; display: block; }
   nav ul { display: flex; gap: 28px; list-style: none; align-items: center; }
   nav a { text-decoration: none; font-size: .85rem; font-weight: 700; color: var(--black); }
   nav a:hover { color: var(--red); }
@@ -155,14 +155,21 @@
 
   /* ===== フッター ===== */
   footer { background: var(--black); color: #fff; text-align: center; padding: 40px 20px; font-size: .85rem; border-top: 4px solid var(--red); }
-  footer .logo-f { display: inline-block; background: #fff; padding: 10px 18px; line-height: 0; margin-bottom: 16px; }
-  footer .logo-f img { height: 44px; width: auto; }
+  footer .logo-f { display: flex; align-items: center; justify-content: center; gap: 32px; margin-bottom: 22px; }
+  footer .logo-f img { display: block; height: auto; }
+  footer .logo-f .tr { width: 240px; }
+  footer .logo-f .tcs { width: 170px; }
+  footer .logo-f .sep { width: 1px; height: 52px; background: rgba(255,255,255,.35); }
   footer p { color: #bbb; }
 
   /* ===== スマホ対応 ===== */
   @media (max-width: 760px) {
     .header-inner { height: 60px; }
-    .logo img { height: 40px; }
+    .logo img { width: 170px; }
+    footer .logo-f { flex-direction: column; gap: 22px; }
+    footer .logo-f .sep { width: 60px; height: 1px; }
+    footer .logo-f .tr { width: 220px; }
+    footer .logo-f .tcs { width: 160px; }
     nav li:not(:last-child) { display: none; }
     section { padding: 56px 0; }
     .hero {                          /* スマホ用画像 1200×1500（4:5） */
@@ -188,7 +195,7 @@
 
 <header>
   <div class="header-inner">
-    <a href="#top" class="logo"><img src="logo.jpg" alt="TOPRANK" width="150" height="68"></a>
+    <a href="#top" class="logo"><img src="logo-header.png" alt="TOPRANK" width="780" height="60"></a>
     <nav>
       <ul>
         <li><a href="#overview">開催概要</a></li>
@@ -289,7 +296,11 @@
 <a href="#entry" class="side-tab">参加申し込み</a>
 
 <footer>
-  <div class="logo-f"><img src="logo.jpg" alt="TOPRANK" width="150" height="68"></div>
+  <div class="logo-f">
+    <img class="tr" src="logo-footer.png" alt="TOPRANK" width="780" height="60">
+    <span class="sep" aria-hidden="true"></span>
+    <img class="tcs" src="logo-tcs.png" alt="TOPRANK CLASSIC SPECIALITIES" width="720" height="249">
+  </div>
   <p>非営利で開催するサーキット走行会です。</p>
   <p style="margin-top:10px">Copyright &copy; TOPRANK All Rights Reserved.</p>
 </footer>
