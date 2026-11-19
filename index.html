@@ -61,7 +61,8 @@
   /* ===== メインビジュアル（hero.jpg・画面幅いっぱい） ===== */
   .hero {
     position: relative; width: 100%;
-    height: 68vh; min-height: 420px; max-height: 760px;
+    aspect-ratio: 12 / 5;            /* PC・タブレット用画像 2400×1000 */
+    min-height: 420px; max-height: 85vh;
     background:
       url("hero.jpg") center 70% / cover no-repeat,
       linear-gradient(135deg, #111 0%, #212121 55%, #4a0019 100%);
@@ -164,7 +165,13 @@
     .logo img { height: 40px; }
     nav li:not(:last-child) { display: none; }
     section { padding: 56px 0; }
-    .hero { height: 56vh; min-height: 360px; }
+    .hero {                          /* スマホ用画像 1200×1500（4:5） */
+      aspect-ratio: 4 / 5; min-height: 0; max-height: none;
+      background:
+        url("hero-sp.jpg") center / cover no-repeat,
+        url("hero.jpg") center 70% / cover no-repeat,   /* hero-sp.jpg が無い間はPC用で代用 */
+        linear-gradient(135deg, #111 0%, #212121 55%, #4a0019 100%);
+    }
     .hero-caption { text-align: left; padding-bottom: 28px; }
     .hero-caption .en { min-width: 100%; }
     .info dl { grid-template-columns: 1fr; }
@@ -197,8 +204,8 @@
 <div class="hero" id="top" role="img" aria-label="TOPRANK走行会 メインビジュアル">
   <div class="hero-caption">
     <h1>TOPRANK走行会 2027<br>富士スピードウェイ</h1>
-    <p class="hero-meta">2027年1月13日（水）11:30～15:00 ／ 非営利開催</p>
-    <span class="en">TOPRANK CIRCUIT MEETING at FUJI SPEEDWAY</span>
+    <p class="hero-meta">2027年1月13日（水）11:30～15:00</p>
+    <span class="en">TOPRANK Track Day 2027 at FUJI SPEEDWAY</span>
   </div>
 </div>
 
@@ -213,7 +220,7 @@
         <dl><dt>開催日時</dt><dd>2027年1月13日（水）11:30～15:00</dd></dl>
         <dl><dt>開催場所</dt><dd>富士スピードウェイ レーシングコース</dd></dl>
         <dl><dt>参加費</dt><dd>30,000円（計測器・保険料込み）</dd></dl>
-        <dl><dt>募集台数</dt><dd>30台（先着順）<p class="note">※台数は仮設定です。変更となる場合があります。</p></dd></dl>
+        <dl><dt>募集台数</dt><dd>30台（先着順）<p class="note">※台数設定要否は未定（仮置き）</p></dd></dl>
       </div>
       <div class="links">
         <a class="btn" href="https://share.google/umrBissjwYooZF7CF" target="_blank" rel="noopener"><span>会場の場所（Googleマップ）</span></a>
@@ -228,7 +235,7 @@
       <h2 class="sec-title"><span class="en">Time Schedule</span><span class="ja">タイムスケジュール</span></h2>
       <ul class="timeline">
         <li><span class="time">11:30</span><span class="desc">受付</span></li>
-        <li><span class="time">12:30</span><span class="desc">ドライバーズミーティング（ドラミ）<span class="sub">参加必須です</span></span></li>
+        <li><span class="time">12:30</span><span class="desc">ドライバーズミーティング（ドラミ）<span class="sub">※参加必須</span></span></li>
         <li class="main"><span class="time">13:30</span><span class="desc">走行開始<span class="sub">走行本数：30分 × 2本</span></span></li>
         <li><span class="time">15:00</span><span class="desc">終了</span></li>
       </ul>
@@ -244,17 +251,16 @@
         <h3>参加にあたって</h3>
         <ul>
           <li><span class="tag">必須</span>ドライバーズミーティングへの参加</li>
-          <li>走行中はシートベルトを着用してください。</li>
-          <li>走行中は窓ガラスを全閉にしてください。</li>
+          <li>走行中のサーキットルール遵守をお願いします（シートベルト着用、窓全閉など）</li>
         </ul>
       </div>
 
       <div class="notice-group">
-        <h3>装備（ヘルメット・グローブ・長袖長ズボン 必須）</h3>
+        <h3><span class="tag">必須</span>装備</h3>
         <ul>
-          <li><span class="tag">必須</span><strong>ヘルメット：</strong>フルフェイス型またはジェット型</li>
-          <li><span class="tag">必須</span><strong>服装：</strong>レーシングスーツ、または綿製の長袖・長ズボン</li>
-          <li><span class="tag">必須</span><strong>グローブ：</strong>レーシンググローブ、または指先・手首が露出せず滑りにくい素材のもの（軍手は不可）</li>
+          <li><strong>ヘルメット：</strong>フルフェイス型またはジェット型</li>
+          <li><strong>服装：</strong>レーシングスーツ、または綿製の長袖・長ズボン</li>
+          <li><strong>グローブ：</strong>レーシンググローブ、または指先・手首が露出せず滑りにくい素材のもの（軍手は不可）</li>
           <li><strong>シューズ：</strong>レーシングシューズ、またはペダル操作しやすい履き慣れた運動靴</li>
         </ul>
       </div>
@@ -267,7 +273,7 @@
   <section id="entry" class="bg-black">
     <div class="container">
       <h2 class="sec-title"><span class="en">Entry</span><span class="ja">参加申し込み</span></h2>
-      <p class="lead">下記フォームに必要事項をご入力のうえ、送信してください。募集台数に達し次第、受付を終了します。</p>
+      <p class="lead">下記フォームに必要事項をご入力のうえ送信ください。募集台数に達し次第、受付を終了します。後日、担当者よりご案内させていただきます。</p>
 
       <div class="form-wrap">
         <!-- ▼▼ ここに Googleフォームの <iframe ...></iframe> を貼り付けてください ▼▼ -->
@@ -284,7 +290,7 @@
 
 <footer>
   <div class="logo-f"><img src="logo.jpg" alt="TOPRANK" width="150" height="68"></div>
-  <p>TOPRANK走行会 2027 富士スピードウェイ ／ 非営利で開催するサーキット走行会です。</p>
+  <p>非営利で開催するサーキット走行会です。</p>
   <p style="margin-top:10px">Copyright &copy; TOPRANK All Rights Reserved.</p>
 </footer>
 
