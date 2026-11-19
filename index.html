@@ -141,8 +141,12 @@
   .alert { background: var(--gray); border-left: 4px solid var(--black); padding: 16px 20px; font-size: .95rem; }
 
   /* ===== 申し込みフォーム ===== */
-  .form-wrap { width: 100%; max-width: 720px; margin: 0 auto; text-align: center; background: #fff; color: var(--black); padding: 24px 12px; }
+  .form-wrap { width: 100%; max-width: 720px; margin: 0 auto; text-align: center; background: #fff; color: var(--black); padding: 12px 0; }
   .form-wrap iframe { display: block; width: 100%; max-width: 100%; margin: 0 auto; border: 0; }
+  /* フォームの高さ：PC/タブレット 2200px、スマホは折り返しが増えるため高めに設定。
+     設問を増減したら、この数値を調整してください */
+  .form-wrap iframe.gform { height: 2200px; }
+  @media (max-width: 760px) { .form-wrap iframe.gform { height: 2700px; } }
   .form-placeholder { border: 2px dashed #bbb; padding: 40px 20px; color: #777; }
 
   /* ===== 右端の固定タブ（PCのみ） ===== */
@@ -284,9 +288,7 @@
 
       <div class="form-wrap">
         <!-- ▼▼ ここに Googleフォームの <iframe ...></iframe> を貼り付けてください ▼▼ -->
-        <div class="form-placeholder">
-          ここにGoogleフォームの埋め込みコード（&lt;iframe&gt;）を貼り付けてください。
-        </div>
+        <iframe class="gform" src="https://docs.google.com/forms/d/e/1FAIpQLScP1BopQ28lMNKFob-Xd9nuRTNXYxa5MyvfBgTM7upBL1Yb7w/viewform?embedded=true" title="TOPRANK走行会 2027 参加申し込みフォーム" loading="lazy" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
         <!-- ▲▲ ここまで ▲▲ -->
       </div>
     </div>
@@ -315,7 +317,6 @@
         f.removeAttribute('width');          // 貼り付けコードの固定幅を無効化
         f.style.width = '100%';
         f.style.maxWidth = '100%';
-        if (!f.getAttribute('height')) f.setAttribute('height', '1400');
       });
     }
     fit();
