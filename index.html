@@ -55,7 +55,6 @@
     background: var(--black); color: #fff; padding: 9px 24px;
     transform: skewX(-12deg);
   }
-  nav a.cta span { display: inline-block; transform: skewX(12deg); }
   nav a.cta:hover { background: var(--red); color: #fff; }
 
   /* ===== メインビジュアル（hero.jpg・画面幅いっぱい） ===== */
@@ -153,6 +152,7 @@
   .notice-group ul { list-style: none; border-top: 1px solid var(--line); }
   .notice-group li { padding: 14px 6px; border-bottom: 1px solid var(--line); }
   .tag { display: inline-block; background: var(--red); color: #fff; font-size: .7rem; font-weight: 700; letter-spacing: .1em; padding: 1px 10px; margin-right: 10px; vertical-align: 2px; transform: skewX(-12deg); }
+  .tag-title { align-self: baseline; margin-left: 4px; font-size: .8rem; padding: 3px 14px; }
   .alert { background: var(--gray); border-left: 4px solid var(--black); padding: 16px 20px; font-size: .95rem; }
 
   /* ===== 申し込みフォーム ===== */
@@ -221,7 +221,7 @@
         <li><a href="#overview">開催概要</a></li>
         <li><a href="#schedule">タイムスケジュール</a></li>
         <li><a href="#notice">注意事項</a></li>
-        <li><a href="#entry" class="cta"><span>参加申し込み</span></a></li>
+        <li><a href="#entry" class="cta">参加申し込み</a></li>
       </ul>
     </nav>
   </div>
@@ -241,7 +241,7 @@
   <section id="overview">
     <div class="container">
       <h2 class="sec-title"><span class="en">Overview</span><span class="ja">開催概要</span></h2>
-      <p class="lead">本イベントは、サーキット走行を安全に楽しんでいただくための非営利の走行会です。初めての方もお気軽にご参加ください。</p>
+      <p class="lead">本イベントは、サーキット走行を安全に楽しんでいただくため、グループ分けもいたします。初めての方もお気軽にご参加ください。</p>
       <div class="info">
         <dl><dt>イベント名</dt><dd>TOPRANK走行会 2027 富士スピードウェイ</dd></dl>
         <dl><dt>開催日時</dt><dd>2027年1月13日（水）11:30～15:00</dd></dl>
@@ -275,9 +275,9 @@
           <li><span class="t">12:30～13:30</span><span>ドライバーズミーティング</span></li>
           <li><span class="t">13:30～14:00</span><span>走行：Aグループ 1回目</span></li>
           <li><span class="t">14:00～14:30</span><span>走行：Bグループ 1回目</span></li>
-          <li><span class="t">14:30～〇〇:〇〇</span><span>走行：Aグループ 2回目</span></li>
-          <li><span class="t">15:00～〇〇:〇〇</span><span>走行：Bグループ 2回目</span></li>
-          <li><span class="t">16:00～〇〇:〇〇</span><span>表彰式</span></li>
+          <li><span class="t">14:30～15:00</span><span>走行：Aグループ 2回目</span></li>
+          <li><span class="t">15:00～15:30</span><span>走行：Bグループ 2回目</span></li>
+          <li><span class="t">16:00～16:30</span><span>表彰式</span></li>
         </ul>
         <p class="detail-note">※走行は 30分 × 2本</p>
       </details>
@@ -287,18 +287,18 @@
   <!-- ===== 注意事項・持ち物 ===== -->
   <section id="notice">
     <div class="container">
-      <h2 class="sec-title"><span class="en">Notice</span><span class="ja">注意事項・持ち物</span></h2>
+      <h2 class="sec-title"><span class="en">Notice</span><span class="ja">注意事項・持ち物</span><span class="tag tag-title">必須</span></h2>
 
       <div class="notice-group">
         <h3>参加にあたって</h3>
         <ul>
-          <li><span class="tag">必須</span>ドライバーズミーティングへの参加</li>
+          <li>ドライバーズミーティングへの参加</li>
           <li>走行中のサーキットルール遵守をお願いします（シートベルト着用、窓全閉など）</li>
         </ul>
       </div>
 
       <div class="notice-group">
-        <h3><span class="tag">必須</span>装備</h3>
+        <h3>装備</h3>
         <ul>
           <li><strong>ヘルメット：</strong>フルフェイス型またはジェット型</li>
           <li><strong>服装：</strong>レーシングスーツ、または綿製の長袖・長ズボン</li>
